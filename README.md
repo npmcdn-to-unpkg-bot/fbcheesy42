@@ -5,6 +5,7 @@
 * jQuery v1.11.1
 * Google Analytics ou Piwik ou Open Web Analytics
 
+
 ## Stuff
 
 * Update on Open Street Map [osm](http://www.openstreetmap.org/search?query=fromagerie%20baret#map=19/45.44306/4.38663&layers=N)

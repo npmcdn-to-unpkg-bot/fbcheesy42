@@ -1,0 +1,63 @@
+# Site settings
+title: Fromagerie Baret Shop
+email: contact@fromageriebaret.fr
+description: Fromagerie de Saint Etienne depuis 1946 plateaux de fromage et cremerie.
+baseurl: "/fbcheesy42" # the subpath of your site, e.g. /blog/
+url: "https://fitBounds.github.io" # the base hostname & protocol for your site
+logo_url: img/logo.png
+api_key: YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0
+
+# Build settings
+markdown: kramdown
+collections:
+  products:
+    output: true
+
+#cookies
+  ck_description: En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies déstinés à mesurer l'audience et les usages de nos visiteurs.
+  ck_accept: ok!
+  ck_plus: en savoir plus!
+
+# Google
+google_verification:
+analytics:
+
+# Hero
+hero:
+    hero_img: hero.jpg
+    hero_title: Fromagerie-Crémerie
+    hero_description: Spécialités régionales.
+
+# Descriptions
+descr:
+  titre:
+  intro: Depuis 1946 la fromagerie Baret propose une large gamme de fromages (plus de 300 sortes) à la coupe, et notamment de nombreux produits locaux.
+
+# Opening hours
+oh: Horaires d'ouvertures
+Lundi: 14h30 - 19h30
+Mardivendredi: 07h30 - 12h30 / 14h30 - 19h30
+Samedi: 08h00 - 12h30 / 15h00 - 19h00
+
+# Social settings
+facebook: https://fr-fr.facebook.com/Fromagerie-Baret-429112203828345
+twitter: http://twitter.com
+instagram: http://instagram.com
+gplus: https://plus.google.com/114718839713161057978/
+feed: no
+
+# Newsletters
+newsletters: Newsletters InfoLettres
+mailchimps: http://eepurl.com/bPAlSf
+newslinks: '#'
+
+# Testimonials
+testimonials:
+    testimonials_img: parallax.jpg
+
+# Footer
+copyright: © 2016 Fromagerie Baret
+mention: mention legale
+cgv: cgv
+contact: contact@fromageriebaret.fr
+phone: (+33) 04 77 33 31 85

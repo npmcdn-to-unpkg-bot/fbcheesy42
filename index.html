@@ -1,217 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+---
+layout: default
+title: La Fromagerie en ligne
+---
+<script>
+/* Hide menu after click
+----------------------------------------------*/
+$('.navbar-nav li a').click(function(event) {
+		$('.in').collapse('hide');
+});
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Fromagerie Baret Saint Etienne">
-	<meta name="author" content="Baret">
-	<title>Fromagerie Baret - Saint Etienne</title>
+/* Smooth scroll to section
+----------------------------------------------*/
+$('a.scroll[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+						$('html,body').animate({
+								scrollTop: target.offset().top-70
+						}, 2000);
+						return false;
+				}
+		}
+});
+</script>
 
-	<!-- Custom CSS -->
-	<link href="css/fitbounds.css" rel="stylesheet">
 
-	<!-- Custom Fonts -->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-</head>
-
-<body>
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html">La Fromagerie Baret</a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="about.html">À propos</a>
-					</li>
-					<li>
-						<a href="contact.html">Contacte</a>
-					</li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container -->
-	</nav>
-
-	<!-- Header Carousel -->
-	<header id="myCarousel" class="carousel slide">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
-			<div class="item active">
-				<div class="fill" style="background-image:url('./img/from-baret-1.jpg');"></div>
-				<!-- <div class="carousel-caption">
-					<h2>Caption 1</h2>
-				</div> -->
-			</div>
-			<div class="item">
-				<div class="fill" style="background-image:url('./img/from-baret-2.jpg');"></div>
-				<!-- <div class="carousel-caption">
-					<h2>Caption 2</h2>
-				</div> -->
-			</div>
-			<div class="item">
-				<div class="fill" style="background-image:url('./img/from-baret-3.jpg');"></div>
-				<!-- <div class="carousel-caption">
-					<h2>Caption 3</h2>
-				</div> -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ site.hero.hero_img }}') no-repeat; background-size: cover;">
+	<div class="hero-content">
+		<div class="container-fluid">
+			<div class="hero-content-inner">
+				<h1>{{ site.hero.hero_title }}</h1>
+				<p>{{ site.hero.hero_description }}</p>
 			</div>
 		</div>
-
-		<!-- Controls -->
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			<span class="icon-prev"></span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">
-			<span class="icon-next"></span>
-		</a>
-	</header>
-
-	<!-- Page Content -->
-	<div class="container">
-
-		<!-- Features Section -->
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header">La Fromagerie Baret</h1>
-			</div>
-			<div class="col-md-6">
-				<p>Fromagerie de Saint Etienne depuis 1946</p>
-				<ul>
-					<li><strong>Fromages-Crémerie Familliale</strong></li>
-					<li>Spécialités régionales, producteurs locaux</li>
-					<li>Plateaux de fromage sur commande</li>
-				</ul>
-				<p>introduction... Produits de qualité à prix bas...</p>
-			</div>
-			<div class="col-md-6">
-				<img class="img-responsive" src="./img/from-baret.png" alt="">
-			</div>
-		</div>
-
-		<!-- Marketing Icons Section -->
-		<div class="col-lg-12">
-			<h2 class="page-header">
-				Commande de Plateaux fromage <small>Tous nos plateaux sont a retirer en magasin</small>
-			</h2>
-		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default text-center">
-				<div class="panel-heading">
-					<h4><i class="fa fa-fw fa-gift"></i> Panier Découverte</h4>
-				</div>
-				<div class="panel-body">
-					<img class="img-responsive" src="./img/pan/pan1.jpg" alt="">
-					<br>
-					<p>Photo avec prix et description...</p>
-					<br>
-					<a href="panier1.html" class="btn btn-default">
-						<i class="fa fa-search"></i> Détails
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default text-center">
-				<div class="panel-heading">
-					<h4><i class="fa fa-glass"></i> Panier Apéritif</h4>
-				</div>
-				<div class="panel-body">
-					<img class="img-responsive" src="./img/pan/pan2.jpg" alt="">
-					<br>
-					<p>Photo avec prix et description...</p>
-					<br>
-					<a href="panier2.html" class="btn btn-default">
-						<i class="fa fa-search"></i> Détails
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="panel panel-default text-center">
-				<div class="panel-heading">
-					<h4><i class="fa fa-shopping-basket"></i> Panier du berger</h4>
-				</div>
-				<div class="panel-body">
-					<img class="img-responsive" src="./img/pan/pan3.jpg" alt="">
-					<br>
-					<p>Photo avec prix et description...</p>
-					<br>
-					<a href="panier3.html" class="btn btn-default">
-						<i class="fa fa-search"></i> Détails
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<hr>
-
-		<!-- New Letters -->
-		<div class="col-lg-12">
-			<div class="row well fbcolor">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-						<h4><i class="fa fa-envelope"></i> InfoLettre</h4>
-					</div>
-					<div class="panel-body text-center">
-						<p>Pour restez en contact avec nos évenements, inscrivez-vous à notre Info lettre.</p>
-						<a target='_blank' href="http://mailchimp.com/" class="btn btn-default">InfoLettre</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<hr>
-
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-				<div class="col-lg-12">
-					<p>Copyright &copy; fromageriebaret.fr 2016 - <a href="mentions.html">Mentions légales</a></p>
-				</div>
-			</div>
-		</footer>
-
 	</div>
-	<!-- /.container -->
+	<div class="container-fluid"></div>
+</div>
 
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
+<!-- Start About -->
+<div id="about" class="about">
+	<div class="container-fluid">
+		<!-- <h2 class="section-title">À propos</h2> -->
 
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>{{ site.descr.titre }}</h3>
+				<p>{{ site.descr.intro }}</p>
 
-	<!-- Script to Activate the Carousel -->
-	<script>
-	$('.carousel').carousel({
-		interval: 5000 //changes the speed
-	})
-	</script>
+				{% for desc in site.data.desc %}
+				<div class="media">
+					<div class="media-left">
+						{{ desc.icon }}
+					</div>
+					<div class="media-body">
+						<p>{{ desc.desc }}</p>
+					</div>
+				</div>
+				<div class="">
+					{% endfor %}
+					<br>
+					<div class="media-right">
+						{% if site.facebook %}<a target=_blank href="{{ site.facebook }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>{% endif %}
+						{% if site.instagram %}<a target=_blank href="{{ site.instagram }}"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>{% endif %}
+						{% if site.twitter %}<a target=_blank href="{{ site.twitter }}"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>{% endif %}
+						<!-- {% if site.gplus %}<a href="{{ site.gplus }}"><svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg></a>{% endif %} -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<img src="img/about.jpg" alt="...">
+	</div>
+	<div class="col-sm-4">
+		<br>
+		<div id="info"></div>
+		<h3>
+			<i class="fa fa-clock-o" aria-hidden="true"></i>
+			{{ site.oh }}
+		</h3>
+		<p>
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<a href="mailto:{{ site.contact }}"> {{ site.contact }}</a><br>
+			<i class="fa fa-phone" aria-hidden="true"></i> {{ site.phone }}
+		</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>Lundi </td>
+					<td> {{ site.Lundi }}</td>
+				</tr>
+				<tr>
+					<td>Mar./vend. </td>
+					<td> {{ site.Mardivendredi }}</td>
+				</tr>
+				<tr>
+					<td>Samedi </td>
+					<td> {{ site.Samedi }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+<!-- End About -->
 
-</body>
+<div id="map" style="align:center width: 600px; height: 330px"></div>
+<script>
+var map = L.map('map').setView([45.44306, 4.38622], 18);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-</html>
+var marker = L.marker([45.44306, 4.38622]).addTo(map);
+marker.bindPopup(
+	"<center><b>Fromagerie Baret</b><br>" +
+	"14 rue Charles de Gaulle, <br>42000 Saint Etienne, FRANCE<br>" +
+	"<a target='_blank' href='https://www.mapillary.com/app/index/?focus=map&pKey=_a0bk6u_qhYPQ4lup9dysw&lat=45.44321216&lng=4.38592969&z=17&menu=false'>" +
+	"<img src='{{ site.baseurl }}/img/mapillary.png' alt='street view' height='180' width='180'></a></center>"
+).openPopup();
+map.scrollWheelZoom.disable();
+</script>
+
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+	<div class="overlay-container">
+		<div class="overlay">
+		</div>
+		<div class="container-fluid">
+		</div>
+		<div class="container-fluid">
+			<h2 class="section-title">{{ site.newsletters }}</h2>
+				<a class="btn" target=_blank href="{{ site.mailchimps}}">
+					<i class="fa fa-envelope fa-3x"></i>
+				</a>
+			<div id="produits"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+---
+layout: shopping
+head:
+  snipcart.html
+---
+
+<div class="product-details">
+  <!-- <img src="{{ site.baseurl }}/img/{{ page.image }}" alt="{{ page.name }}" class="responsive"/><br> -->
+  <img src="{{ site.baseurl }}/img/{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
+  <div class="product-description">
+		<center><h2><u>{{ page.name }}</u></h2></center>
+
+    <p>
+      {{ page.content }}
+    </p>
+
+    <button class="snipcart-add-item"
+      data-item-name="{{ page.name }}"
+      data-item-id="{{ page.sku }}"
+      data-item-image="{{ site.baseurl }}/img/{{ page.image }}"
+      data-item-url="{{ site.baseurl }}"
+      data-item-price="{{ page.price }}">
+      Réserver pour {{ page.price }} €
+    </button>
+  </div>
+</div>

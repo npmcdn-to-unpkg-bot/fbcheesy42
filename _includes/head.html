@@ -1,0 +1,40 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="{{ site.description }}">
+	<!-- {% if site.google-verification %}
+	<meta name="google-site-verification" content="{{ site.google_verification }}">
+	{% endif %} -->
+
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+	<!-- jQuery -->
+	<script
+	src="http://code.jquery.com/jquery-2.1.4.min.js"
+	integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+	crossorigin="anonymous">
+	</script>
+
+	<!-- Leaflet -->
+	<link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+	<script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.js"></script>
+
+	{% for script in layout.head %}
+	{% include {{ script }} %}
+	{% endfor %}
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
+
+</head>

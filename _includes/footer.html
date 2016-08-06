@@ -1,0 +1,22 @@
+<!-- Start Footer -->
+<footer class="main-footer">
+    <div class="container-fluid">
+
+        <ul class="social">
+            {% if site.facebook %}<li><a href="{{ site.facebook }}"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>{% endif %}
+            {% if site.twitter %}<li><a href="{{ site.twitter }}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>{% endif %}
+            {% if site.instagram %}<li><a href="{{ site.instagram }}"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>{% endif %}
+            {% if site.gplus %}<li><a href="{{ site.gplus }}"><svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg></a></li>{% endif %}
+            <small>
+              <!-- <svg class="icon icon-heart-o"><use xlink:href="#icon-heart-o"></use></svg> -->
+              {% if site.mention %}<a class="linkfoot" href="mentions"> {{ site.mention }} </a>{% endif %} |
+              {% if site.cgv %}<a href="cgv"> {{ site.cgv }} </a>{% endif %} |
+              {% if site.contact %}<a href="mailto:{{ site.contact }}"> contact </a>{% endif %}
+              <!-- <svg class="icon icon-heart-o"><use xlink:href="#icon-heart-o"></use></svg> -->
+            </small>
+        </ul>
+
+        <small>{% if site.copyright %} {{ site.copyright }} {% endif %}</small>
+
+    </div>
+</footer>

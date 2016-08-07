@@ -1,6 +1,5 @@
 ---
 layout: default
-title: La Fromagerie en ligne
 ---
 <script>
 /* Hide menu after click
@@ -65,7 +64,6 @@ $('a.scroll[href*=#]:not([href=#])').click(function() {
 						{% if site.facebook %}<a target=_blank href="{{ site.facebook }}"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>{% endif %}
 						{% if site.instagram %}<a target=_blank href="{{ site.instagram }}"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>{% endif %}
 						{% if site.twitter %}<a target=_blank href="{{ site.twitter }}"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>{% endif %}
-						<!-- {% if site.gplus %}<a href="{{ site.gplus }}"><svg class="icon icon-google"><use xlink:href="#icon-google"></use></svg></a>{% endif %} -->
 					</div>
 				</div>
 			</div>
@@ -108,19 +106,20 @@ $('a.scroll[href*=#]:not([href=#])').click(function() {
 </div>
 <!-- End About -->
 
+<!-- Map -->
 <div id="map" style="align:center width: 600px; height: 330px"></div>
 <script>
-var map = L.map('map').setView([45.44337303885285, 4.386194944381714], 18);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="https://osmlab.github.io/attribution-mark/copyright/?name=FromagerieBaret">OpenStreetMap</a> contributors'
+var map = L.map('map').setView([{{ site.lat }}, {{ site.lng }}], {{ site.zoom }});
+L.tileLayer('{{site.LtileLayer}}', {
+	attribution: '&copy; <a href="https://osmlab.github.io/attribution-mark/copyright/?name={{ site.title }}">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-var marker = L.marker([45.44306, 4.38622]).addTo(map);
+var marker = L.marker([{{ site.mlat }}, {{ site.mlng }}]).addTo(map);
+
 marker.bindPopup(
-	"<center><b>Fromagerie Baret</b><br>" +
-	"14 rue Charles de Gaulle, <br>42000 Saint Etienne, FRANCE<br>" +
-	"<a target='_blank' href='https://www.mapillary.com/app/index/?focus=map&pKey=_a0bk6u_qhYPQ4lup9dysw&lat=45.44321216&lng=4.38592969&z=17&menu=false'>" +
-	"<img src='{{ site.baseurl }}/img/mapillary.png' alt='street view' height='180' width='180'></a></center>"
+	"<center><b>{{ site.title }}</b><br>" + "{{ site.address }}" +
+	"<a target='_blank' href='http://mapillary.com/map/im/{{site.mapillary_photokey}}'>" +
+	"<img src='https://d1cuyjsrcm0gby.cloudfront.net/{{site.mapillary_photokey}}/thumb-2048.jpg'  alt='street view' height='180' width='180'></a></center>"
 ).openPopup();
 map.scrollWheelZoom.disable();
 </script>

@@ -1,7 +1,7 @@
 # Site settings
-title: Fromagerie Baret Shop
+title: Fromagerie Baret
 email: contact@fromageriebaret.fr
-description: Fromagerie de Saint Etienne depuis 1946 plateaux de fromage et cremerie.
+description: Fromagerie de Saint Etienne depuis 1947 plateaux de fromage et cremerie.
 baseurl: "/fbcheesy42" # the subpath of your site, e.g. /blog/
 url: "https://fitBounds.github.io" # the base hostname & protocol for your site
 logo_url: img/logo.png
@@ -31,13 +31,28 @@ hero:
 # Descriptions
 descr:
   titre:
-  intro: Depuis 1946 la fromagerie Baret propose une large gamme de fromages (plus de 300 sortes) à la coupe, et notamment de nombreux produits locaux.
+  intro: Depuis 1947 la fromagerie Baret propose une large gamme de fromages (plus de 300 sortes) à la coupe, et notamment de nombreux produits locaux.
 
 # Opening hours
 oh: Horaires d'ouvertures
 Lundi: 14h30 - 19h30
 Mardivendredi: 07h30 - 12h30 / 14h30 - 19h30
 Samedi: 08h00 - 12h30 / 15h00 - 19h00
+
+#location
+  #map center
+lat: 45.44337303885285
+lng: 4.386194944381714
+zoom: 18
+  #marker
+mlat: 45.44306
+mlng: 4.38622
+  #address
+address: 14 rue Charles de Gaulle, <br>42000 Saint Etienne, FRANCE<br>
+  #Leaflet tileLayer
+LtileLayer: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+  #mapillary.com streetview
+mapillary_photokey: _a0bk6u_qhYPQ4lup9dysw
 
 # Social settings
 facebook: https://fr-fr.facebook.com/Fromagerie-Baret-429112203828345
